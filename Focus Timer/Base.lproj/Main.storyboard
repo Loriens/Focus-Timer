@@ -37,11 +37,41 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="bzQ-aE-tjU"/>
+                        <segue destination="5bf-hO-BQV" kind="relationship" relationship="viewControllers" id="K61-N8-iCn"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bgJ-E8-0hz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="135.9375"/>
+        </scene>
+        <!--settings-->
+        <scene sceneID="OyP-m1-txq">
+            <objects>
+                <tableViewController id="5bf-hO-BQV" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Sqi-i6-F8Y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="gnc-tW-plv">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gnc-tW-plv" id="B6P-EX-ZkN">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5bf-hO-BQV" id="I5F-Kv-HBr"/>
+                            <outlet property="delegate" destination="5bf-hO-BQV" id="dMq-Da-dSi"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="settings" id="d7e-lJ-CVI"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="enG-Q6-rnY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="847"/>
         </scene>
     </scenes>
     <resources>
