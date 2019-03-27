@@ -24,6 +24,7 @@
                                 <state key="normal" image="play"/>
                                 <connections>
                                     <action selector="pressedStartPauseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n5e-RD-E6K"/>
+                                    <action selector="startStopButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pkf-27-TVt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -32,7 +33,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Таймер" image="timer" id="4hG-n8-NSh"/>
                     <connections>
-                        <outlet property="startPauseButton" destination="cDK-up-VPl" id="F5T-lP-E6p"/>
+                        <outlet property="startStopButton" destination="cDK-up-VPl" id="Din-Ju-lLK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -12,6 +12,7 @@
 		043482F9224BE07100BEDB46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043482F7224BE07100BEDB46 /* Main.storyboard */; };
 		043482FB224BE07300BEDB46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043482FA224BE07300BEDB46 /* Assets.xcassets */; };
 		043482FE224BE07300BEDB46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043482FC224BE07300BEDB46 /* LaunchScreen.storyboard */; };
+		04348308224BFA0600BEDB46 /* ButtonState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04348307224BFA0600BEDB46 /* ButtonState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		043482FA224BE07300BEDB46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		043482FD224BE07300BEDB46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		043482FF224BE07300BEDB46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04348307224BFA0600BEDB46 /* ButtonState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				043482F3224BE07100BEDB46 /* AppDelegate.swift */,
 				043482F5224BE07100BEDB46 /* ViewController.swift */,
+				04348307224BFA0600BEDB46 /* ButtonState.swift */,
 				043482F7224BE07100BEDB46 /* Main.storyboard */,
 				043482FA224BE07300BEDB46 /* Assets.xcassets */,
 				043482FC224BE07300BEDB46 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			files = (
 				043482F6224BE07100BEDB46 /* ViewController.swift in Sources */,
 				043482F4224BE07100BEDB46 /* AppDelegate.swift in Sources */,
+				04348308224BFA0600BEDB46 /* ButtonState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
