@@ -19,9 +19,11 @@ class ViewController: UIViewController {
 
     @IBAction func startStopButtonPressed(_ sender: Any) {
         if buttonState == .stop {
-            startStopButton.setImage(UIImage(named: "play"), for: .normal)
-        } else {
             startStopButton.setImage(UIImage(named: "stop"), for: .normal)
+            buttonState = .play
+        } else {
+            startStopButton.setImage(UIImage(named: "play"), for: .normal)
+            buttonState = .stop
         }
     }
     
