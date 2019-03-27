@@ -67,7 +67,7 @@
                             <outlet property="delegate" destination="5bf-hO-BQV" id="dMq-Da-dSi"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="settings" id="d7e-lJ-CVI"/>
+                    <tabBarItem key="tabBarItem" title="settings" image="settings" id="d7e-lJ-CVI"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="enG-Q6-rnY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -75,6 +75,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="settings" width="25" height="25"/>
         <image name="timer" width="25" height="25"/>
     </resources>
 </document>
