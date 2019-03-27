@@ -14,13 +14,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     
     private var buttonState = ButtonState.stop
-    private var timer: Timer!
+    private var timer: Timer?
+    private var breakTimer: Timer?
+    private var mainBreakTimerSeconds = 5
+    private var breakTimerSeconds: Int!
     private var mainTimerSeconds = 10
     private var timerSeconds: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        breakTimerSeconds = mainBreakTimerSeconds
         setMainTimerSeconds()
     }
 
@@ -34,13 +38,23 @@ class ViewController: UIViewController {
             return
         } else if timerSeconds == 1 {
             timer.invalidate()
-            toggleButtonStartStop()
-            setMainTimerSeconds()
+            setAndStartBreakTimerSeconds()
             return
         }
         
         timerSeconds = timerSeconds - 1
         timeLabel.text = TimeParser.stringTime(from: timerSeconds)
+    }
+    
+    @objc func breakTimerUpdate(_ timer: Timer) {
+        if buttonState == .stop || breakTimerSeconds == 1 {
+            timer.invalidate()
+            setMainTimerSeconds()
+            return
+        }
+        
+        breakTimerSeconds = breakTimerSeconds - 1
+        timeLabel.text = TimeParser.stringTime(from: breakTimerSeconds)
     }
     
     private func toggleButtonStartStop() {
@@ -57,6 +71,17 @@ class ViewController: UIViewController {
     private func setMainTimerSeconds() {
         timerSeconds = mainTimerSeconds
         timeLabel.text = TimeParser.stringTime(from: timerSeconds)
+        timeLabel.textColor = UIColor(named: "baseColor")
+        startStopButton.setImage(UIImage(named: "play"), for: .normal)
+    }
+    
+    private func setAndStartBreakTimerSeconds() {
+        breakTimerSeconds = mainBreakTimerSeconds
+        timeLabel.text = TimeParser.stringTime(from: breakTimerSeconds)
+        startStopButton.setImage(UIImage(named: "black stop"), for: .normal)
+        timeLabel.textColor = UIColor.black
+        
+        breakTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(breakTimerUpdate(_:)), userInfo: nil, repeats: true)
     }
     
 }
