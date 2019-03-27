@@ -14,10 +14,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        startPauseButton.layer.cornerRadius = startPauseButton.frame.width / 2
     }
 
-
+    @IBAction func pressedStartPauseButton(_ sender: Any) {
+        
+    }
+    
 }
 
