@@ -8,8 +8,7 @@
 
 import Foundation
 
-
 enum ButtonState {
-    case start
+    case play
     case stop
 }

@@ -18,9 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDK-up-VPl">
-                                <rect key="frame" x="90" y="214" width="140" height="140"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDK-up-VPl">
+                                <rect key="frame" x="90" y="199.5" width="140" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cDK-up-VPl" secondAttribute="height" multiplier="1:1" id="U7H-Dn-L2q"/>
+                                    <constraint firstAttribute="width" constant="140" id="ayw-Q7-3C2"/>
+                                </constraints>
                                 <state key="normal" image="play"/>
                                 <connections>
                                     <action selector="startStopButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pkf-27-TVt"/>
@@ -28,6 +31,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cDK-up-VPl" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="U1q-ug-6bm"/>
+                            <constraint firstItem="cDK-up-VPl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xBj-y2-Jzb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Таймер" image="timer" id="4hG-n8-NSh"/>
