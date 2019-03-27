@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var startStopButton: UIButton!
+    @IBOutlet weak var timeLabel: UILabel!
+    
     private var buttonState = ButtonState.stop
     
     override func viewDidLoad() {

@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDK-up-VPl">
-                                <rect key="frame" x="90" y="199.5" width="140" height="140"/>
+                                <rect key="frame" x="90" y="279.5" width="140" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cDK-up-VPl" secondAttribute="height" multiplier="1:1" id="U7H-Dn-L2q"/>
                                     <constraint firstAttribute="width" constant="140" id="ayw-Q7-3C2"/>
@@ -29,10 +29,18 @@
                                     <action selector="startStopButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pkf-27-TVt"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wrh-EL-t1t">
+                                <rect key="frame" x="68" y="177.5" width="184" height="84"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="cDK-up-VPl" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="U1q-ug-6bm"/>
+                            <constraint firstItem="Wrh-EL-t1t" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-50" id="5RO-Wz-Hqw"/>
+                            <constraint firstItem="Wrh-EL-t1t" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="EKx-gB-CYc"/>
+                            <constraint firstItem="cDK-up-VPl" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="80" id="U1q-ug-6bm"/>
                             <constraint firstItem="cDK-up-VPl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xBj-y2-Jzb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -40,6 +48,7 @@
                     <tabBarItem key="tabBarItem" title="Таймер" image="timer" id="4hG-n8-NSh"/>
                     <connections>
                         <outlet property="startStopButton" destination="cDK-up-VPl" id="Din-Ju-lLK"/>
+                        <outlet property="timeLabel" destination="Wrh-EL-t1t" id="xLE-3q-Tcv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
