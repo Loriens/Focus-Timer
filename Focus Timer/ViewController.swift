@@ -17,6 +17,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(TimeParser.stringTime(from: 600))
+        print(TimeParser.stringTime(from: 599))
+        print(TimeParser.stringTime(from: 543))
     }
 
     @IBAction func startStopButtonPressed(_ sender: Any) {
