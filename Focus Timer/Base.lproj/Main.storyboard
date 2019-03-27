@@ -23,7 +23,6 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="play"/>
                                 <connections>
-                                    <action selector="pressedStartPauseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n5e-RD-E6K"/>
                                     <action selector="startStopButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pkf-27-TVt"/>
                                 </connections>
                             </button>
@@ -46,6 +45,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="05S-tn-iVr" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mbB-Hm-7cd">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
