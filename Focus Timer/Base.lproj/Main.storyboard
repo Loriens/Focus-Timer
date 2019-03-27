@@ -29,7 +29,7 @@
                                     <action selector="startStopButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pkf-27-TVt"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wrh-EL-t1t">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="25:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wrh-EL-t1t">
                                 <rect key="frame" x="68" y="177.5" width="184" height="84"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                 <nil key="textColor"/>
@@ -39,7 +39,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Wrh-EL-t1t" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-50" id="5RO-Wz-Hqw"/>
-                            <constraint firstItem="Wrh-EL-t1t" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="EKx-gB-CYc"/>
+                            <constraint firstItem="Wrh-EL-t1t" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="LXr-3O-lT2"/>
                             <constraint firstItem="cDK-up-VPl" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="80" id="U1q-ug-6bm"/>
                             <constraint firstItem="cDK-up-VPl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xBj-y2-Jzb"/>
                         </constraints>
