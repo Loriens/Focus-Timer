@@ -233,7 +233,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Приложение работает на технике Pomodoro. Это известный метод тайм-менеджмента." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="op1-Wp-u8t">
-                                <rect key="frame" x="20" y="40" width="280" height="61"/>
+                                <rect key="frame" x="20" y="30" width="280" height="61"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="e8n-76-vkW"/>
                                 </constraints>
@@ -242,7 +242,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCb-WK-CMa">
-                                <rect key="frame" x="20" y="111" width="280" height="203"/>
+                                <rect key="frame" x="20" y="101" width="280" height="203"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="203" id="hac-hf-bk4"/>
                                 </constraints>
@@ -252,7 +252,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhf-Te-uo0">
-                                <rect key="frame" x="20" y="324" width="280" height="223.5"/>
+                                <rect key="frame" x="20" y="314" width="280" height="223.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="223.5" id="WbH-Ec-Pmm"/>
                                 </constraints>
@@ -270,7 +270,7 @@
                         <constraints>
                             <constraint firstItem="Rhf-Te-uo0" firstAttribute="top" secondItem="PCb-WK-CMa" secondAttribute="bottom" constant="10" id="0Ek-0e-F41"/>
                             <constraint firstItem="Rhf-Te-uo0" firstAttribute="leading" secondItem="CsV-QP-Zr9" secondAttribute="leading" constant="20" id="4Rs-yf-xZB"/>
-                            <constraint firstItem="op1-Wp-u8t" firstAttribute="top" secondItem="CsV-QP-Zr9" secondAttribute="top" constant="20" id="6PR-M6-uW6"/>
+                            <constraint firstItem="op1-Wp-u8t" firstAttribute="top" secondItem="CsV-QP-Zr9" secondAttribute="top" constant="10" id="6PR-M6-uW6"/>
                             <constraint firstItem="PCb-WK-CMa" firstAttribute="top" secondItem="op1-Wp-u8t" secondAttribute="bottom" constant="10" id="7e2-r7-Knp"/>
                             <constraint firstItem="CsV-QP-Zr9" firstAttribute="trailing" secondItem="op1-Wp-u8t" secondAttribute="trailing" constant="20" id="R0V-az-oiK"/>
                             <constraint firstItem="op1-Wp-u8t" firstAttribute="leading" secondItem="CsV-QP-Zr9" secondAttribute="leading" constant="20" id="TwT-Ef-ykF"/>
