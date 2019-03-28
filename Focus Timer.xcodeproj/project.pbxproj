@@ -16,6 +16,7 @@
 		0434830A224C1EE600BEDB46 /* TimeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04348309224C1EE600BEDB46 /* TimeParser.swift */; };
 		045B5D32224D6853002B24FA /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B5D31224D6853002B24FA /* SettingsTableViewController.swift */; };
 		045B5D34224D6B38002B24FA /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B5D33224D6B38002B24FA /* Key.swift */; };
+		045B5D3A224D765F002B24FA /* InfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 045B5D39224D765F002B24FA /* InfoView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		04348309224C1EE600BEDB46 /* TimeParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeParser.swift; sourceTree = "<group>"; };
 		045B5D31224D6853002B24FA /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		045B5D33224D6B38002B24FA /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		045B5D39224D765F002B24FA /* InfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		045B5D37224D75C3002B24FA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				045B5D39224D765F002B24FA /* InfoView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045B5D3A224D765F002B24FA /* InfoView.xib in Resources */,
 				043482FE224BE07300BEDB46 /* LaunchScreen.storyboard in Resources */,
 				043482FB224BE07300BEDB46 /* Assets.xcassets in Resources */,
 				043482F9224BE07100BEDB46 /* Main.storyboard in Resources */,
