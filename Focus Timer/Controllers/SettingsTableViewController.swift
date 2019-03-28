@@ -27,6 +27,8 @@ class SettingsTableViewController: UITableViewController {
             breakTimeLabel.text = "\(breakingTime)"
             breakTimeSlider.value = Float(breakingTime)
         }
+        
+        title = "Настройки"
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
