@@ -16,6 +16,7 @@
 		0434830A224C1EE600BEDB46 /* TimeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04348309224C1EE600BEDB46 /* TimeParser.swift */; };
 		045B5D32224D6853002B24FA /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B5D31224D6853002B24FA /* SettingsTableViewController.swift */; };
 		045B5D34224D6B38002B24FA /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B5D33224D6B38002B24FA /* Key.swift */; };
+		0499917A224D86D700CB11AF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04999179224D86D700CB11AF /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		04348309224C1EE600BEDB46 /* TimeParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeParser.swift; sourceTree = "<group>"; };
 		045B5D31224D6853002B24FA /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		045B5D33224D6B38002B24FA /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		04999179224D86D700CB11AF /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				043482F5224BE07100BEDB46 /* ViewController.swift */,
 				045B5D31224D6853002B24FA /* SettingsTableViewController.swift */,
+				04999179224D86D700CB11AF /* AboutViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				043482F6224BE07100BEDB46 /* ViewController.swift in Sources */,
 				045B5D32224D6853002B24FA /* SettingsTableViewController.swift in Sources */,
 				043482F4224BE07100BEDB46 /* AppDelegate.swift in Sources */,
+				0499917A224D86D700CB11AF /* AboutViewController.swift in Sources */,
 				04348308224BFA0600BEDB46 /* ButtonState.swift in Sources */,
 				0434830A224C1EE600BEDB46 /* TimeParser.swift in Sources */,
 				045B5D34224D6B38002B24FA /* Key.swift in Sources */,

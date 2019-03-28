@@ -224,10 +224,10 @@
             </objects>
             <point key="canvasLocation" x="2087" y="931"/>
         </scene>
-        <!--View Controller-->
+        <!--About View Controller-->
         <scene sceneID="Ywq-rs-dHd">
             <objects>
-                <viewController id="T4r-BA-5f1" sceneMemberID="viewController">
+                <viewController id="T4r-BA-5f1" customClass="AboutViewController" customModule="Focus_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c19-Hk-AMG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
