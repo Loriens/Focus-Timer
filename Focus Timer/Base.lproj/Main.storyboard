@@ -80,7 +80,7 @@
         <!--Настройки-->
         <scene sceneID="OyP-m1-txq">
             <objects>
-                <tableViewController id="5bf-hO-BQV" sceneMemberID="viewController">
+                <tableViewController id="5bf-hO-BQV" customClass="SettingsTableViewController" customModule="Focus_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Sqi-i6-F8Y">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -106,6 +106,9 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="120" id="2Wy-0j-wcy"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <action selector="workingTimeSliderValueChanged:" destination="5bf-hO-BQV" eventType="valueChanged" id="yQU-xZ-S3t"/>
+                                                    </connections>
                                                 </slider>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzW-PB-eT3">
                                                     <rect key="frame" x="149" y="11.5" width="21" height="21"/>
@@ -142,6 +145,9 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="120" id="BOs-Bl-yCM"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <action selector="breakTimeSliderValueChanged:" destination="5bf-hO-BQV" eventType="valueChanged" id="HRX-gH-ITF"/>
+                                                    </connections>
                                                 </slider>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nog-Lg-vVf">
                                                     <rect key="frame" x="159.5" y="11.5" width="10.5" height="21"/>
@@ -201,6 +207,10 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Настройки" image="settings" id="d7e-lJ-CVI"/>
+                    <connections>
+                        <outlet property="breakTimeLabel" destination="Nog-Lg-vVf" id="f1M-hb-81W"/>
+                        <outlet property="workingTimeLabel" destination="jzW-PB-eT3" id="waf-wz-HbG"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="enG-Q6-rnY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

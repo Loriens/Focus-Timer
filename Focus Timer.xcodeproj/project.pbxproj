@@ -14,6 +14,7 @@
 		043482FE224BE07300BEDB46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043482FC224BE07300BEDB46 /* LaunchScreen.storyboard */; };
 		04348308224BFA0600BEDB46 /* ButtonState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04348307224BFA0600BEDB46 /* ButtonState.swift */; };
 		0434830A224C1EE600BEDB46 /* TimeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04348309224C1EE600BEDB46 /* TimeParser.swift */; };
+		045B5D32224D6853002B24FA /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B5D31224D6853002B24FA /* SettingsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		043482FF224BE07300BEDB46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04348307224BFA0600BEDB46 /* ButtonState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonState.swift; sourceTree = "<group>"; };
 		04348309224C1EE600BEDB46 /* TimeParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeParser.swift; sourceTree = "<group>"; };
+		045B5D31224D6853002B24FA /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				043482F3224BE07100BEDB46 /* AppDelegate.swift */,
 				043482F5224BE07100BEDB46 /* ViewController.swift */,
+				045B5D31224D6853002B24FA /* SettingsTableViewController.swift */,
 				04348307224BFA0600BEDB46 /* ButtonState.swift */,
 				04348309224C1EE600BEDB46 /* TimeParser.swift */,
 				043482F7224BE07100BEDB46 /* Main.storyboard */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				043482F6224BE07100BEDB46 /* ViewController.swift in Sources */,
+				045B5D32224D6853002B24FA /* SettingsTableViewController.swift in Sources */,
 				043482F4224BE07100BEDB46 /* AppDelegate.swift in Sources */,
 				04348308224BFA0600BEDB46 /* ButtonState.swift in Sources */,
 				0434830A224C1EE600BEDB46 /* TimeParser.swift in Sources */,
