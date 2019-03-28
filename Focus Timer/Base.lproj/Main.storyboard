@@ -232,36 +232,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="Приложение работает на технике Pomodoro. Это известный метод тайм-менеджмента." translatesAutoresizingMaskIntoConstraints="NO" id="Y9K-kX-AVm">
-                                <rect key="frame" x="24" y="45" width="280" height="73"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yaQ-Qs-nTv">
-                                <rect key="frame" x="24" y="126" width="280" height="133"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Идея состоит в том, что один отрезок времени вы фокусируетесь на работе, после чего идёт короткий отдых. Всё вместе это составляет один "помидор". Стандартные отрезки: 25 минут работы и 5 минут отдыха. Вы можете их редактировать, как кажется удобнее</string>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ORr-Gg-nGY">
-                                <rect key="frame" x="24" y="274" width="280" height="183.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Приложение работает на технике Pomodoro. Это известный метод тайм-менеджмента." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="op1-Wp-u8t">
+                                <rect key="frame" x="20" y="40" width="280" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="e8n-76-vkW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCb-WK-CMa">
+                                <rect key="frame" x="20" y="111" width="280" height="203"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="203" id="hac-hf-bk4"/>
+                                </constraints>
+                                <string key="text">Идея состоит в том, что один отрезок времени вы фокусируетесь на работе, после чего идёт короткий отдых. Всё вместе это составляет один "помидор". Стандартные отрезки: 25 минут работы и 5 минут отдыха. Вы можете их редактировать, как кажется удобнее.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhf-Te-uo0">
+                                <rect key="frame" x="20" y="324" width="280" height="223.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="223.5" id="WbH-Ec-Pmm"/>
+                                </constraints>
                                 <string key="text">Основные цели состоят в следующем:
-
 1. Поддержка решимости достигать собственных целей.
 2. Улучшение рабочего и учебного процесса.
 3. Увеличение эффективности работы и учёбы.
 4. Развитие решимости действовать в сложных ситуациях.</string>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="yaQ-Qs-nTv" firstAttribute="top" secondItem="Y9K-kX-AVm" secondAttribute="bottom" constant="20" id="5ME-d0-xfU"/>
-                            <constraint firstItem="ORr-Gg-nGY" firstAttribute="top" secondItem="yaQ-Qs-nTv" secondAttribute="bottom" constant="20" id="eSc-gC-yW1"/>
+                            <constraint firstItem="Rhf-Te-uo0" firstAttribute="top" secondItem="PCb-WK-CMa" secondAttribute="bottom" constant="10" id="0Ek-0e-F41"/>
+                            <constraint firstItem="Rhf-Te-uo0" firstAttribute="leading" secondItem="CsV-QP-Zr9" secondAttribute="leading" constant="20" id="4Rs-yf-xZB"/>
+                            <constraint firstItem="op1-Wp-u8t" firstAttribute="top" secondItem="CsV-QP-Zr9" secondAttribute="top" constant="20" id="6PR-M6-uW6"/>
+                            <constraint firstItem="PCb-WK-CMa" firstAttribute="top" secondItem="op1-Wp-u8t" secondAttribute="bottom" constant="10" id="7e2-r7-Knp"/>
+                            <constraint firstItem="CsV-QP-Zr9" firstAttribute="trailing" secondItem="op1-Wp-u8t" secondAttribute="trailing" constant="20" id="R0V-az-oiK"/>
+                            <constraint firstItem="op1-Wp-u8t" firstAttribute="leading" secondItem="CsV-QP-Zr9" secondAttribute="leading" constant="20" id="TwT-Ef-ykF"/>
+                            <constraint firstItem="CsV-QP-Zr9" firstAttribute="trailing" secondItem="Rhf-Te-uo0" secondAttribute="trailing" constant="20" id="i5v-hj-BGI"/>
+                            <constraint firstItem="CsV-QP-Zr9" firstAttribute="trailing" secondItem="PCb-WK-CMa" secondAttribute="trailing" constant="20" id="lST-Bs-3b8"/>
+                            <constraint firstItem="PCb-WK-CMa" firstAttribute="leading" secondItem="CsV-QP-Zr9" secondAttribute="leading" constant="20" id="r49-EP-dEY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CsV-QP-Zr9"/>
                     </view>
