@@ -20,9 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if let window = window {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let mainVC = storyboard.instantiateInitialViewController()
+            let mainVC = storyboard.instantiateInitialViewController()!
+            let navVC = UINavigationController(rootViewController: mainVC)
             
-            window.rootViewController = mainVC
+            window.rootViewController = navVC
             window.makeKeyAndVisible()
         }
         return true

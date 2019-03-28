@@ -37,6 +37,10 @@ class ViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(userDefaultsValueChanged(_:)), name: UserDefaults.didChangeNotification, object: nil)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
+    }
 
     @IBAction func startStopButtonPressed(_ sender: Any) {
         toggleButtonStartStop()

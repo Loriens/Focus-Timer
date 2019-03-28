@@ -28,7 +28,11 @@ class SettingsTableViewController: UITableViewController {
             breakTimeSlider.value = Float(breakingTime)
         }
         
-        title = "Настройки"
+        navigationController?.navigationBar.topItem?.title = "Настройки"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = false
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
