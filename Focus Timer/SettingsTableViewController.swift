@@ -25,6 +25,7 @@ class SettingsTableViewController: UITableViewController {
         let roundedValue = round(slider.value / stepSlider) * stepSlider
         slider.value = roundedValue
         workingTimeLabel.text = "\(Int(roundedValue))"
+        UserDefaults.standard.set(Int(roundedValue), forKey: Key.workingTime.rawValue)
     }
     
     @IBAction func breakTimeSliderValueChanged(_ sender: Any) {
@@ -35,6 +36,7 @@ class SettingsTableViewController: UITableViewController {
         let roundedValue = round(slider.value / stepSlider) * stepSlider
         slider.value = roundedValue
         breakTimeLabel.text = "\(Int(roundedValue))"
+        UserDefaults.standard.set(Int(roundedValue), forKey: Key.breakingTime.rawValue)
     }
     
 }

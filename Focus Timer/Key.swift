@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Key {
+enum Key: String {
     case workingTime
     case breakingTime
 }

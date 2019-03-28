@@ -26,6 +26,8 @@ class ViewController: UIViewController {
         
         breakTimerSeconds = mainBreakTimerSeconds
         setMainTimerSeconds()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(userDefaultsValueChanged(_:)), name: UserDefaults.didChangeNotification, object: nil)
     }
 
     @IBAction func startStopButtonPressed(_ sender: Any) {
@@ -80,6 +82,18 @@ class ViewController: UIViewController {
         startStopButton.setImage(UIImage(named: "black stop"), for: .normal)
         
         breakTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(breakTimerUpdate(_:)), userInfo: nil, repeats: true)
+    }
+    
+    @objc func userDefaultsValueChanged(_ sender: Any?) {
+        if let workingTime = UserDefaults.standard.object(forKey: Key.workingTime.rawValue) as? Int {
+            mainTimerSeconds = workingTime
+            setMainTimerSeconds()
+        }
+        
+        if let breakingTime = UserDefaults.standard.object(forKey: Key.breakingTime.rawValue) as? Int {
+            breakTimerSeconds = breakingTime
+        }
+
     }
     
 }
