@@ -80,7 +80,6 @@
         <!--Настройки-->
         <scene sceneID="OyP-m1-txq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="enG-Q6-rnY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="5bf-hO-BQV" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Sqi-i6-F8Y">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -102,10 +101,26 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="25" minValue="25" maxValue="55" translatesAutoresizingMaskIntoConstraints="NO" id="RfY-eK-QJ6">
+                                                    <rect key="frame" x="178" y="7" width="124" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="120" id="2Wy-0j-wcy"/>
+                                                    </constraints>
+                                                </slider>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzW-PB-eT3">
+                                                    <rect key="frame" x="149" y="11.5" width="21" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="RfY-eK-QJ6" firstAttribute="leading" secondItem="jzW-PB-eT3" secondAttribute="trailing" constant="10" id="1Jf-BY-RyS"/>
                                                 <constraint firstItem="jqP-M3-vUX" firstAttribute="centerY" secondItem="B6P-EX-ZkN" secondAttribute="centerY" id="F24-xq-JVr"/>
+                                                <constraint firstItem="RfY-eK-QJ6" firstAttribute="centerY" secondItem="B6P-EX-ZkN" secondAttribute="centerY" id="HsY-BO-mau"/>
                                                 <constraint firstItem="jqP-M3-vUX" firstAttribute="leading" secondItem="B6P-EX-ZkN" secondAttribute="leadingMargin" constant="5" id="KEQ-A4-Ba5"/>
+                                                <constraint firstItem="jzW-PB-eT3" firstAttribute="centerY" secondItem="B6P-EX-ZkN" secondAttribute="centerY" id="mPZ-TH-cAD"/>
+                                                <constraint firstAttribute="trailing" secondItem="RfY-eK-QJ6" secondAttribute="trailing" constant="20" id="pYq-G9-26R"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -122,9 +137,25 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="5" maxValue="15" translatesAutoresizingMaskIntoConstraints="NO" id="0f8-z6-RRz">
+                                                    <rect key="frame" x="178" y="7" width="124" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="120" id="BOs-Bl-yCM"/>
+                                                    </constraints>
+                                                </slider>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nog-Lg-vVf">
+                                                    <rect key="frame" x="159.5" y="11.5" width="10.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="b3F-TD-NkL" firstAttribute="centerY" secondItem="nFx-5P-j77" secondAttribute="centerY" id="3AA-L6-A3a"/>
+                                                <constraint firstItem="Nog-Lg-vVf" firstAttribute="centerY" secondItem="nFx-5P-j77" secondAttribute="centerY" id="J6n-zp-pAk"/>
+                                                <constraint firstAttribute="trailing" secondItem="0f8-z6-RRz" secondAttribute="trailing" constant="20" id="V19-r7-QFm"/>
+                                                <constraint firstItem="0f8-z6-RRz" firstAttribute="leading" secondItem="Nog-Lg-vVf" secondAttribute="trailing" constant="10" id="VGk-Ib-5Z3"/>
+                                                <constraint firstItem="0f8-z6-RRz" firstAttribute="centerY" secondItem="nFx-5P-j77" secondAttribute="centerY" id="Wxw-DW-pnz"/>
                                                 <constraint firstItem="b3F-TD-NkL" firstAttribute="leading" secondItem="nFx-5P-j77" secondAttribute="leadingMargin" constant="5" id="sCi-M2-eFg"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -171,8 +202,9 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Настройки" image="settings" id="d7e-lJ-CVI"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="enG-Q6-rnY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1058" y="931"/>
+            <point key="canvasLocation" x="1057.5" y="930.63380281690138"/>
         </scene>
     </scenes>
     <resources>
