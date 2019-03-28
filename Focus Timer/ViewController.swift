@@ -71,7 +71,6 @@ class ViewController: UIViewController {
     private func setMainTimerSeconds() {
         timerSeconds = mainTimerSeconds
         timeLabel.text = TimeParser.stringTime(from: timerSeconds)
-        timeLabel.textColor = UIColor(named: "baseColor")
         startStopButton.setImage(UIImage(named: "play"), for: .normal)
     }
     
@@ -79,7 +78,6 @@ class ViewController: UIViewController {
         breakTimerSeconds = mainBreakTimerSeconds
         timeLabel.text = TimeParser.stringTime(from: breakTimerSeconds)
         startStopButton.setImage(UIImage(named: "black stop"), for: .normal)
-        timeLabel.textColor = UIColor.black
         
         breakTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(breakTimerUpdate(_:)), userInfo: nil, repeats: true)
     }
