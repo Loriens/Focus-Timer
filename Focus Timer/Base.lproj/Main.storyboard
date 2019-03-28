@@ -182,7 +182,7 @@
                             </tableViewSection>
                             <tableViewSection id="pKp-od-Xu3">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsCell" id="TFL-ya-jhH">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AboutCell" id="TFL-ya-jhH">
                                         <rect key="frame" x="0.0" y="279.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TFL-ya-jhH" id="LJM-Oc-j0r">
@@ -216,11 +216,58 @@
                         <outlet property="breakTimeSlider" destination="0f8-z6-RRz" id="ck4-4S-oso"/>
                         <outlet property="workingTimeLabel" destination="jzW-PB-eT3" id="waf-wz-HbG"/>
                         <outlet property="workingTimeSlider" destination="RfY-eK-QJ6" id="zht-OZ-DuU"/>
+                        <segue destination="T4r-BA-5f1" kind="show" identifier="showAboutApp" id="9Jg-te-Lc6"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="enG-Q6-rnY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1057.5" y="930.63380281690138"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ywq-rs-dHd">
+            <objects>
+                <viewController id="T4r-BA-5f1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c19-Hk-AMG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="Приложение работает на технике Pomodoro. Это известный метод тайм-менеджмента." translatesAutoresizingMaskIntoConstraints="NO" id="Y9K-kX-AVm">
+                                <rect key="frame" x="24" y="45" width="280" height="73"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yaQ-Qs-nTv">
+                                <rect key="frame" x="24" y="126" width="280" height="133"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Идея состоит в том, что один отрезок времени вы фокусируетесь на работе, после чего идёт короткий отдых. Всё вместе это составляет один "помидор". Стандартные отрезки: 25 минут работы и 5 минут отдыха. Вы можете их редактировать, как кажется удобнее</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ORr-Gg-nGY">
+                                <rect key="frame" x="24" y="274" width="280" height="183.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Основные цели состоят в следующем:
+
+1. Поддержка решимости достигать собственных целей.
+2. Улучшение рабочего и учебного процесса.
+3. Увеличение эффективности работы и учёбы.
+4. Развитие решимости действовать в сложных ситуациях.</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yaQ-Qs-nTv" firstAttribute="top" secondItem="Y9K-kX-AVm" secondAttribute="bottom" constant="20" id="5ME-d0-xfU"/>
+                            <constraint firstItem="ORr-Gg-nGY" firstAttribute="top" secondItem="yaQ-Qs-nTv" secondAttribute="bottom" constant="20" id="eSc-gC-yW1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CsV-QP-Zr9"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kmz-rs-jih" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="931"/>
         </scene>
     </scenes>
     <resources>

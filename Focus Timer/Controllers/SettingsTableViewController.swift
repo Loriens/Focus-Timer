@@ -29,6 +29,15 @@ class SettingsTableViewController: UITableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let cell = tableView.cellForRow(at: indexPath)
+        if cell?.reuseIdentifier == "AboutCell" {
+            performSegue(withIdentifier: "showAboutApp", sender: nil)
+        }
+    }
+    
     @IBAction func workingTimeSliderValueChanged(_ sender: Any) {
         guard let slider = sender as? UISlider else {
             return
