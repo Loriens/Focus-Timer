@@ -24,6 +24,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let workingTime = UserDefaults.standard.object(forKey: Key.workingTime.rawValue) as? Int {
+            mainTimerSeconds = workingTime
+        }
+        
+        if let breakingTime = UserDefaults.standard.object(forKey: Key.breakingTime.rawValue) as? Int {
+            breakTimerSeconds = breakingTime
+        }
+        
         breakTimerSeconds = mainBreakTimerSeconds
         setMainTimerSeconds()
         

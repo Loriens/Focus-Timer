@@ -12,9 +12,21 @@ class SettingsTableViewController: UITableViewController {
     
     @IBOutlet weak var workingTimeLabel: UILabel!
     @IBOutlet weak var breakTimeLabel: UILabel!
+    @IBOutlet weak var workingTimeSlider: UISlider!
+    @IBOutlet weak var breakTimeSlider: UISlider!
+    
     private var stepSlider: Float = 5
     
     override func viewDidLoad() {
+        if let workingTime = UserDefaults.standard.object(forKey: Key.workingTime.rawValue) as? Int {
+            workingTimeLabel.text = "\(workingTime)"
+            workingTimeSlider.value = Float(workingTime)
+        }
+        
+        if let breakingTime = UserDefaults.standard.object(forKey: Key.breakingTime.rawValue) as? Int {
+            breakTimeLabel.text = "\(breakingTime)"
+            breakTimeSlider.value = Float(breakingTime)
+        }
     }
     
     @IBAction func workingTimeSliderValueChanged(_ sender: Any) {
