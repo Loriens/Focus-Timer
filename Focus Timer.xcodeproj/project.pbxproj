@@ -39,6 +39,7 @@
 		045CFAFD224E58210076FF4D /* CustomPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPlayer.swift; sourceTree = "<group>"; };
 		045CFAFF224E5FEB0076FF4D /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		045CFB01224E71D70076FF4D /* CustomNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNotification.swift; sourceTree = "<group>"; };
+		045CFB06224E78750076FF4D /* Focus Timer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Focus Timer.entitlements"; sourceTree = "<group>"; };
 		04999179224D86D700CB11AF /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,6 +59,7 @@
 			children = (
 				043482F2224BE07100BEDB46 /* Focus Timer */,
 				043482F1224BE07100BEDB46 /* Products */,
+				045CFB03224E78750076FF4D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +74,7 @@
 		043482F2224BE07100BEDB46 /* Focus Timer */ = {
 			isa = PBXGroup;
 			children = (
+				045CFB06224E78750076FF4D /* Focus Timer.entitlements */,
 				043482F3224BE07100BEDB46 /* AppDelegate.swift */,
 				045B5D35224D75A8002B24FA /* Model */,
 				045B5D37224D75C3002B24FA /* Views */,
@@ -115,6 +118,13 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		045CFB03224E78750076FF4D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,6 +160,12 @@
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
+							};
+							com.apple.NetworkExtensions.iOS = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 0;
 							};
 						};
 					};

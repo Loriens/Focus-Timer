@@ -13,16 +13,13 @@ class CustomNotification {
     
     var delegate: UIViewController?
     
-    init() {
-        requestAuth()
-    }
-    
-    private func requestAuth() {
+    func requestAuth(with title: String) {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) {
             success, error in
             
             if success {
                 self.configureNotification()
+                self.createNotification(with: title)
             }
         }
     }
@@ -37,8 +34,9 @@ class CustomNotification {
         
         content.title = text
         content.categoryIdentifier = "timer"
+        content.sound = .default
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         let request = UNNotificationRequest(identifier: "timerIsDone", content: content, trigger: trigger)
         
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
