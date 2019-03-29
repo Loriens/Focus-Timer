@@ -11,22 +11,24 @@ import AVFoundation
 class CustomPlayer {
     
     private var audioPlayer: AVAudioPlayer!
-    private var systemSoundID: Int
-    
-    init() {
-        systemSoundID = 1000
-    }
+    private var systemSoundID: Int?
     
     init(soundID: Int) {
         systemSoundID = soundID
     }
     
     func play() {
-        AudioServicesPlaySystemSound(SystemSoundID(systemSoundID))
+        if let sound = systemSoundID {
+            AudioServicesPlaySystemSound(SystemSoundID(sound))
+        }
     }
     
     func changeSound(soundID: Int) {
         systemSoundID = soundID
+    }
+    
+    func clearSound() {
+        systemSoundID = nil
     }
     
 }
