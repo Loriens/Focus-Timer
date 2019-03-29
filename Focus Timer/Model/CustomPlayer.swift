@@ -10,7 +10,6 @@ import AVFoundation
 
 class CustomPlayer {
     
-    private var audioPlayer: AVAudioPlayer!
     private var systemSoundID: Int?
     
     init(soundID: Int) {
