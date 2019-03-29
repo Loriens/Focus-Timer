@@ -23,11 +23,18 @@ class ViewController: UIViewController {
     private var mainTimerSeconds = 10
     private var timerSeconds: Int!
     private var player: CustomPlayer!
+    /// Number of element in Const.sounds
+    private var soundNumber: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        player = CustomPlayer()
+        soundNumber = UserDefaults.standard.integer(forKey: Key.soundNumber.rawValue)
+        if soundNumber == 0 {
+            player = CustomPlayer()
+        } else {
+            player = CustomPlayer(soundID: soundNumber)
+        }
         
         if let workingTime = UserDefaults.standard.object(forKey: Key.workingTime.rawValue) as? Int {
             mainTimerSeconds = workingTime

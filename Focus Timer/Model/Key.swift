@@ -11,4 +11,5 @@ import Foundation
 enum Key: String {
     case workingTime
     case breakingTime
+    case soundNumber
 }
