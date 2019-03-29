@@ -10,6 +10,6 @@ import Foundation
 
 class Const {
     
-    static let sounds: [String: Int] = ["Bloom": 1021, "Calypso": 1022, "Choo Choo": 1023, "Descent": 1024, "Fanfare": 1025, "Ladder": 1026, "News Flash": 1028, "Noir": 1029, "Update": 1036]
+    static let sounds: [(String, Int)] = [("Нет", 0), ("Bloom", 1021), ("Calypso", 1022), ("Descent", 1024), ("Fanfare", 1025), ("Ladder", 1026), ("News Flash", 1028), ("Noir", 1029), ("Update", 1036)]
     
 }

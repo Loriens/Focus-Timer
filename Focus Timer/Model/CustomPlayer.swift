@@ -10,17 +10,20 @@ import AVFoundation
 
 class CustomPlayer {
     
-    private var systemSoundID: Int?
+    /// If ID is zero, there is no sound
+    private var systemSoundID: Int!
     
-    init() { }
+    init() {
+        systemSoundID = 0
+    }
     
     init(soundID: Int) {
         systemSoundID = soundID
     }
     
     func play() {
-        if let sound = systemSoundID {
-            AudioServicesPlaySystemSound(SystemSoundID(sound))
+        if systemSoundID != 0 {
+            AudioServicesPlaySystemSound(SystemSoundID(systemSoundID))
         }
     }
     
