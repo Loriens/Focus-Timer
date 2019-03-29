@@ -10,11 +10,13 @@ import UIKit
 
 class SoundTableViewController: UITableViewController {
     
-    var player: CustomPlayer!
+    private var player: CustomPlayer!
+    private var checkmarNumber: Int!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        checkmarNumber = UserDefaults.standard.integer(forKey: Key.soundNumber.rawValue)
         player = CustomPlayer()
         title = "Звуки"
     }
@@ -31,6 +33,9 @@ class SoundTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SoundCell")!
         
         cell.textLabel?.text = Const.sounds[indexPath.item].0
+        if indexPath.item == checkmarNumber {
+            cell.accessoryType = .checkmark
+        }
         
         return cell
     }
@@ -38,6 +43,17 @@ class SoundTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         player.changeSound(soundID: Const.sounds[indexPath.item].1)
         player.play()
+        
+        if indexPath.item != checkmarNumber {
+            let oldCell = tableView.cellForRow(at: IndexPath(row: checkmarNumber, section: indexPath.section))
+            oldCell?.accessoryType = .none
+            
+            checkmarNumber = indexPath.item
+            let newCell = tableView.cellForRow(at: indexPath)
+            newCell?.accessoryType = .checkmark
+            UserDefaults.standard.set(checkmarNumber, forKey: Key.soundNumber.rawValue)
+        }
+        
         tableView.deselectRow(at: indexPath, animated: true)
     }
 

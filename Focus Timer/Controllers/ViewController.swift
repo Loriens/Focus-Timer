@@ -73,7 +73,9 @@ class ViewController: UIViewController {
         if buttonState == .stop || breakTimerSeconds == 1 {
             timer.invalidate()
             setMainTimerSeconds()
-            player.play()
+            if breakTimerSeconds == 1 {
+                player.play()
+            }
             return
         }
         
@@ -115,7 +117,9 @@ class ViewController: UIViewController {
         if let breakingTime = UserDefaults.standard.object(forKey: Key.breakingTime.rawValue) as? Int {
             breakTimerSeconds = breakingTime
         }
-
+        
+        let soundNumber = UserDefaults.standard.integer(forKey: Key.soundNumber.rawValue)
+        player.changeSound(soundID: Const.sounds[soundNumber].1)
     }
     
 }

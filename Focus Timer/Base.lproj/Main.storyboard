@@ -234,6 +234,7 @@
                     <connections>
                         <outlet property="breakTimeLabel" destination="Nog-Lg-vVf" id="f1M-hb-81W"/>
                         <outlet property="breakTimeSlider" destination="0f8-z6-RRz" id="ck4-4S-oso"/>
+                        <outlet property="soundNameLabel" destination="cgd-xW-ngK" id="FG2-88-Klp"/>
                         <outlet property="workingTimeLabel" destination="jzW-PB-eT3" id="waf-wz-HbG"/>
                         <outlet property="workingTimeSlider" destination="RfY-eK-QJ6" id="zht-OZ-DuU"/>
                         <segue destination="T4r-BA-5f1" kind="show" identifier="showAboutVC" id="8s0-yi-mGP"/>

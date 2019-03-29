@@ -14,6 +14,7 @@ class SettingsTableViewController: UITableViewController {
     @IBOutlet weak var breakTimeLabel: UILabel!
     @IBOutlet weak var workingTimeSlider: UISlider!
     @IBOutlet weak var breakTimeSlider: UISlider!
+    @IBOutlet weak var soundNameLabel: UILabel!
     
     private var stepSlider: Float = 5
     
@@ -29,6 +30,11 @@ class SettingsTableViewController: UITableViewController {
         }
         
         navigationController?.navigationBar.topItem?.title = "Настройки"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let soundNumber = UserDefaults.standard.integer(forKey: Key.soundNumber.rawValue)
+        soundNameLabel.text = Const.sounds[soundNumber].0
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
