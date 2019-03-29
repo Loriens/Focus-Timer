@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         }
         
         if let breakingTime = UserDefaults.standard.object(forKey: Key.breakingTime.rawValue) as? Int {
-            breakTimerSeconds = breakingTime
+            mainBreakTimerSeconds = breakingTime
         }
         
         breakTimerSeconds = mainBreakTimerSeconds
@@ -74,7 +74,7 @@ class ViewController: UIViewController {
             buttonState = .play
         } else {
             buttonState = .stop
-            startStopButton.setImage(UIImage(named: "play"), for: .normal)
+            setMainTimerSeconds()
         }
     }
     
