@@ -39,8 +39,12 @@ class SettingsTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         
         let cell = tableView.cellForRow(at: indexPath)
-        if cell?.reuseIdentifier == "AboutCell" {
+        
+        switch cell?.reuseIdentifier {
+        case "AboutCell":
             performSegue(withIdentifier: "showAboutApp", sender: nil)
+        default:
+            break
         }
     }
     
