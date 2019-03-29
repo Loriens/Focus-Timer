@@ -31,10 +31,6 @@ class SettingsTableViewController: UITableViewController {
         navigationController?.navigationBar.topItem?.title = "Настройки"
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.isNavigationBarHidden = false
-    }
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
