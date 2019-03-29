@@ -19,6 +19,7 @@
 		045CFAFA224E4D400076FF4D /* SoundTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CFAF9224E4D400076FF4D /* SoundTableViewController.swift */; };
 		045CFAFE224E58210076FF4D /* CustomPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CFAFD224E58210076FF4D /* CustomPlayer.swift */; };
 		045CFB00224E5FEB0076FF4D /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CFAFF224E5FEB0076FF4D /* Const.swift */; };
+		045CFB02224E71D70076FF4D /* CustomNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CFB01224E71D70076FF4D /* CustomNotification.swift */; };
 		0499917A224D86D700CB11AF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04999179224D86D700CB11AF /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		045CFAF9224E4D400076FF4D /* SoundTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundTableViewController.swift; sourceTree = "<group>"; };
 		045CFAFD224E58210076FF4D /* CustomPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPlayer.swift; sourceTree = "<group>"; };
 		045CFAFF224E5FEB0076FF4D /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		045CFB01224E71D70076FF4D /* CustomNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNotification.swift; sourceTree = "<group>"; };
 		04999179224D86D700CB11AF /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +92,7 @@
 				04348309224C1EE600BEDB46 /* TimeParser.swift */,
 				045CFAFD224E58210076FF4D /* CustomPlayer.swift */,
 				045CFAFF224E5FEB0076FF4D /* Const.swift */,
+				045CFB01224E71D70076FF4D /* CustomNotification.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			files = (
 				043482F6224BE07100BEDB46 /* ViewController.swift in Sources */,
 				045CFAFA224E4D400076FF4D /* SoundTableViewController.swift in Sources */,
+				045CFB02224E71D70076FF4D /* CustomNotification.swift in Sources */,
 				045B5D32224D6853002B24FA /* SettingsTableViewController.swift in Sources */,
 				043482F4224BE07100BEDB46 /* AppDelegate.swift in Sources */,
 				0499917A224D86D700CB11AF /* AboutViewController.swift in Sources */,
