@@ -35,11 +35,13 @@ class SettingsTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         
         let cell = tableView.cellForRow(at: indexPath)
+        self.hidesBottomBarWhenPushed = false
         
         switch cell?.reuseIdentifier {
         case "AboutCell":
-            self.hidesBottomBarWhenPushed = false
             performSegue(withIdentifier: "showAboutVC", sender: nil)
+        case "SoundCell":
+            performSegue(withIdentifier: "showSoundVC", sender: nil)
         default:
             break
         }
