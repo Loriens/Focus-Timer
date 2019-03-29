@@ -70,14 +70,14 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="bzQ-aE-tjU"/>
-                        <segue destination="5bf-hO-BQV" kind="relationship" relationship="viewControllers" id="inO-5K-TDn"/>
+                        <segue destination="Kyy-9q-88y" kind="relationship" relationship="viewControllers" id="inO-5K-TDn"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bgJ-E8-0hz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="135.9375"/>
         </scene>
-        <!--Настройки-->
+        <!--Settings Table View Controller-->
         <scene sceneID="OyP-m1-txq">
             <objects>
                 <tableViewController id="5bf-hO-BQV" customClass="SettingsTableViewController" customModule="Focus_Timer" customModuleProvider="target" sceneMemberID="viewController">
@@ -230,43 +230,42 @@
                             <outlet property="delegate" destination="5bf-hO-BQV" id="dMq-Da-dSi"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Настройки" image="settings" id="hIf-iT-I9D"/>
                     <navigationItem key="navigationItem" id="ijI-8k-oQR"/>
                     <connections>
                         <outlet property="breakTimeLabel" destination="Nog-Lg-vVf" id="f1M-hb-81W"/>
                         <outlet property="breakTimeSlider" destination="0f8-z6-RRz" id="ck4-4S-oso"/>
                         <outlet property="workingTimeLabel" destination="jzW-PB-eT3" id="waf-wz-HbG"/>
                         <outlet property="workingTimeSlider" destination="RfY-eK-QJ6" id="zht-OZ-DuU"/>
-                        <segue destination="T4r-BA-5f1" kind="show" identifier="showAboutApp" id="8s0-yi-mGP"/>
+                        <segue destination="T4r-BA-5f1" kind="show" identifier="showAboutVC" id="8s0-yi-mGP"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="enG-Q6-rnY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2087" y="931"/>
+            <point key="canvasLocation" x="3084.375" y="930.63380281690138"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="Ywq-rs-dHd">
             <objects>
-                <viewController id="T4r-BA-5f1" customClass="AboutViewController" customModule="Focus_Timer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutVC" id="T4r-BA-5f1" customClass="AboutViewController" customModule="Focus_Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c19-Hk-AMG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Приложение работает на технике Pomodoro. Это известный метод тайм-менеджмента." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="op1-Wp-u8t">
-                                <rect key="frame" x="20" y="30" width="280" height="61"/>
+                                <rect key="frame" x="20" y="74" width="280" height="61"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCb-WK-CMa">
-                                <rect key="frame" x="20" y="101" width="280" height="203"/>
+                                <rect key="frame" x="20" y="145" width="280" height="203"/>
                                 <string key="text">Идея состоит в том, что один отрезок времени вы фокусируетесь на работе, после чего идёт короткий отдых. Всё вместе это составляет один "помидор". Стандартные отрезки: 25 минут работы и 5 минут отдыха. Вы можете их редактировать, как кажется удобнее.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhf-Te-uo0">
-                                <rect key="frame" x="20" y="314" width="280" height="223.5"/>
+                                <rect key="frame" x="20" y="358" width="280" height="223.5"/>
                                 <string key="text">Основные цели состоят в следующем:
 1. Поддержка решимости достигать собственных целей.
 2. Улучшение рабочего и учебного процесса.
@@ -296,6 +295,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kmz-rs-jih" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1134.375" y="930.63380281690138"/>
+        </scene>
+        <!--Настройки-->
+        <scene sceneID="wzT-nJ-TP4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kyy-9q-88y" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Настройки" image="settings" id="hIf-iT-I9D"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ffu-5l-BIe">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5bf-hO-BQV" kind="relationship" relationship="rootViewController" id="Q0u-JK-bCP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Pu-LV-if5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2086.875" y="930.63380281690138"/>
         </scene>
     </scenes>
     <resources>

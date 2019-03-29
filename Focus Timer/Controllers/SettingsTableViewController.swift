@@ -42,7 +42,11 @@ class SettingsTableViewController: UITableViewController {
         
         switch cell?.reuseIdentifier {
         case "AboutCell":
-            performSegue(withIdentifier: "showAboutApp", sender: nil)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "AboutVC")
+            
+            self.hidesBottomBarWhenPushed = false
+            self.navigationController?.pushViewController(vc, animated: true)
         default:
             break
         }
