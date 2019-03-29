@@ -12,6 +12,8 @@ class CustomPlayer {
     
     private var systemSoundID: Int?
     
+    init() { }
+    
     init(soundID: Int) {
         systemSoundID = soundID
     }

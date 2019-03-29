@@ -16,8 +16,10 @@ class ViewController: UIViewController {
     private var buttonState = ButtonState.stop
     private var timer: Timer?
     private var breakTimer: Timer?
+    // FIX: change time
     private var mainBreakTimerSeconds = 5
     private var breakTimerSeconds: Int!
+    // FIX: change time
     private var mainTimerSeconds = 10
     private var timerSeconds: Int!
     private var player: CustomPlayer!
