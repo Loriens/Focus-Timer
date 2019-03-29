@@ -25,4 +25,8 @@ class CustomPlayer {
         AudioServicesPlaySystemSound(SystemSoundID(systemSoundID))
     }
     
+    func changeSound(soundID: Int) {
+        systemSoundID = soundID
+    }
+    
 }
