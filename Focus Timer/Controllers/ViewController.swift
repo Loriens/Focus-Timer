@@ -26,7 +26,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         player = CustomPlayer()
-        player.play()
         
         if let workingTime = UserDefaults.standard.object(forKey: Key.workingTime.rawValue) as? Int {
             mainTimerSeconds = workingTime
@@ -53,6 +52,7 @@ class ViewController: UIViewController {
         } else if timerSeconds == 1 {
             timer.invalidate()
             setAndStartBreakTimerSeconds()
+            player.play()
             return
         }
         
@@ -64,6 +64,7 @@ class ViewController: UIViewController {
         if buttonState == .stop || breakTimerSeconds == 1 {
             timer.invalidate()
             setMainTimerSeconds()
+            player.play()
             return
         }
         
