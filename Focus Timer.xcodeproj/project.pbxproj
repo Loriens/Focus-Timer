@@ -17,6 +17,7 @@
 		045B5D32224D6853002B24FA /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B5D31224D6853002B24FA /* SettingsTableViewController.swift */; };
 		045B5D34224D6B38002B24FA /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B5D33224D6B38002B24FA /* Key.swift */; };
 		045CFAFA224E4D400076FF4D /* SoundTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CFAF9224E4D400076FF4D /* SoundTableViewController.swift */; };
+		045CFAFE224E58210076FF4D /* CustomPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CFAFD224E58210076FF4D /* CustomPlayer.swift */; };
 		0499917A224D86D700CB11AF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04999179224D86D700CB11AF /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		045B5D31224D6853002B24FA /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		045B5D33224D6B38002B24FA /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		045CFAF9224E4D400076FF4D /* SoundTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundTableViewController.swift; sourceTree = "<group>"; };
+		045CFAFD224E58210076FF4D /* CustomPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPlayer.swift; sourceTree = "<group>"; };
 		04999179224D86D700CB11AF /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,7 @@
 				04348307224BFA0600BEDB46 /* ButtonState.swift */,
 				045B5D33224D6B38002B24FA /* Key.swift */,
 				04348309224C1EE600BEDB46 /* TimeParser.swift */,
+				045CFAFD224E58210076FF4D /* CustomPlayer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				04348308224BFA0600BEDB46 /* ButtonState.swift in Sources */,
 				0434830A224C1EE600BEDB46 /* TimeParser.swift in Sources */,
 				045B5D34224D6B38002B24FA /* Key.swift in Sources */,
+				045CFAFE224E58210076FF4D /* CustomPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

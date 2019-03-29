@@ -20,9 +20,13 @@ class ViewController: UIViewController {
     private var breakTimerSeconds: Int!
     private var mainTimerSeconds = 10
     private var timerSeconds: Int!
+    private var player: CustomPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        player = CustomPlayer()
+        player.play()
         
         if let workingTime = UserDefaults.standard.object(forKey: Key.workingTime.rawValue) as? Int {
             mainTimerSeconds = workingTime
