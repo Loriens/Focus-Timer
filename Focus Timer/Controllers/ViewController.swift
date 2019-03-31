@@ -26,6 +26,8 @@ class ViewController: UIViewController {
     private var player: CustomPlayer!
     /// Number of element in Const.sounds
     private var soundNumber: Int = 0
+    private var startDateMainTimer: Date?
+    private var startDateBreakTimer: Date?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +52,10 @@ class ViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(userDefaultsValueChanged(_:)), name: UserDefaults.didChangeNotification, object: nil)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        <#code#>
+    }
 
     @IBAction func startStopButtonPressed(_ sender: Any) {
         toggleButtonStartStop()
@@ -67,7 +73,7 @@ class ViewController: UIViewController {
         }
         
         timerSeconds = timerSeconds - 1
-        timeLabel.text = TimeParser.stringTime(from: timerSeconds)
+        updateTime(seconds: timerSeconds)
     }
     
     @objc func breakTimerUpdate(_ timer: Timer) {
@@ -81,7 +87,7 @@ class ViewController: UIViewController {
         }
         
         breakTimerSeconds = breakTimerSeconds - 1
-        timeLabel.text = TimeParser.stringTime(from: breakTimerSeconds)
+        updateTime(seconds: breakTimerSeconds)
     }
     
     private func toggleButtonStartStop() {
@@ -121,6 +127,10 @@ class ViewController: UIViewController {
         
         let soundNumber = UserDefaults.standard.integer(forKey: Key.soundNumber.rawValue)
         player.changeSound(soundID: Const.sounds[soundNumber].1)
+    }
+    
+    func updateTime(seconds: Int) {
+        timeLabel.text = TimeParser.stringTime(from: seconds)
     }
     
 }
