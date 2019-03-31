@@ -35,7 +35,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         soundNumber = UserDefaults.standard.integer(forKey: Key.soundNumber.rawValue)
-        print(soundNumber)
         if soundNumber == 0 {
             player = CustomPlayer()
         } else {
