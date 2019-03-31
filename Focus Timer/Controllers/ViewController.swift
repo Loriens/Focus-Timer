@@ -35,10 +35,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         soundNumber = UserDefaults.standard.integer(forKey: Key.soundNumber.rawValue)
+        print(soundNumber)
         if soundNumber == 0 {
             player = CustomPlayer()
         } else {
-            player = CustomPlayer(soundID: soundNumber)
+            player = CustomPlayer(soundID: Const.sounds[soundNumber].1)
         }
         
         if let workingTime = UserDefaults.standard.object(forKey: Key.workingTime.rawValue) as? Int {
@@ -79,7 +80,7 @@ class ViewController: UIViewController {
         if buttonState == .stop || breakTimerSeconds <= 1 {
             timer.invalidate()
             setMainTimerSeconds()
-            if breakTimerSeconds == 1 {
+            if breakTimerSeconds <= 1 {
                 player.play()
             }
             return
