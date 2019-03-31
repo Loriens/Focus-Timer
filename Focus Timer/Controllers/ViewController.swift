@@ -28,6 +28,8 @@ class ViewController: UIViewController {
     private var soundNumber: Int = 0
     private var startDateMainTimer: Date?
     private var startDateBreakTimer: Date?
+    // If there is a value, then breakTimer = breakTimerSeconds - minusSeconds
+    private var minusSeconds: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,10 +53,7 @@ class ViewController: UIViewController {
         setMainTimerSeconds()
         
         NotificationCenter.default.addObserver(self, selector: #selector(userDefaultsValueChanged(_:)), name: UserDefaults.didChangeNotification, object: nil)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        <#code#>
+        NotificationCenter.default.addObserver(self, selector: #selector(updateTimerWhenAppBecomeActive(_:)), name: UIApplication.didBecomeActiveNotification, object: nil)
     }
 
     @IBAction func startStopButtonPressed(_ sender: Any) {
@@ -65,7 +64,7 @@ class ViewController: UIViewController {
         if buttonState == .stop {
             timer.invalidate()
             return
-        } else if timerSeconds == 1 {
+        } else if timerSeconds <= 1 {
             timer.invalidate()
             setAndStartBreakTimerSeconds()
             player.play()
@@ -77,7 +76,7 @@ class ViewController: UIViewController {
     }
     
     @objc func breakTimerUpdate(_ timer: Timer) {
-        if buttonState == .stop || breakTimerSeconds == 1 {
+        if buttonState == .stop || breakTimerSeconds <= 1 {
             timer.invalidate()
             setMainTimerSeconds()
             if breakTimerSeconds == 1 {
@@ -95,9 +94,12 @@ class ViewController: UIViewController {
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerUpdate(_:)), userInfo: nil, repeats: true)
             startStopButton.setImage(UIImage(named: "stop"), for: .normal)
             buttonState = .play
+            startDateMainTimer = Date()
         } else {
             buttonState = .stop
             setMainTimerSeconds()
+            startDateMainTimer = nil
+            startDateBreakTimer = nil
         }
     }
     
@@ -105,32 +107,66 @@ class ViewController: UIViewController {
         timerSeconds = mainTimerSeconds
         timeLabel.text = TimeParser.stringTime(from: timerSeconds)
         startStopButton.setImage(UIImage(named: "play"), for: .normal)
+        buttonState = .stop
     }
     
     private func setAndStartBreakTimerSeconds() {
         breakTimerSeconds = mainBreakTimerSeconds
+        if let minus = minusSeconds {
+            breakTimerSeconds = breakTimerSeconds - minus
+        }
         timeLabel.text = TimeParser.stringTime(from: breakTimerSeconds)
         startStopButton.setImage(UIImage(named: "black stop"), for: .normal)
         
+        startDateMainTimer = nil
+        startDateBreakTimer = Date()
         breakTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(breakTimerUpdate(_:)), userInfo: nil, repeats: true)
+    }
+    
+    func updateTime(seconds: Int) {
+        timeLabel.text = TimeParser.stringTime(from: seconds)
     }
     
     @objc func userDefaultsValueChanged(_ sender: Any?) {
         if let workingTime = UserDefaults.standard.object(forKey: Key.workingTime.rawValue) as? Int {
-            mainTimerSeconds = workingTime
-            setMainTimerSeconds()
+            if workingTime != mainTimerSeconds {
+                mainTimerSeconds = workingTime
+                setMainTimerSeconds()
+            }
         }
         
         if let breakingTime = UserDefaults.standard.object(forKey: Key.breakingTime.rawValue) as? Int {
-            breakTimerSeconds = breakingTime
+            if breakingTime != mainBreakTimerSeconds {
+                mainBreakTimerSeconds = breakingTime
+                setMainTimerSeconds()
+            }
         }
         
         let soundNumber = UserDefaults.standard.integer(forKey: Key.soundNumber.rawValue)
         player.changeSound(soundID: Const.sounds[soundNumber].1)
     }
     
-    func updateTime(seconds: Int) {
-        timeLabel.text = TimeParser.stringTime(from: seconds)
+    @objc func updateTimerWhenAppBecomeActive(_ sender: Any?) {
+        if let startMainTimer = startDateMainTimer {
+            let elapsed = Int(Date().timeIntervalSince(startMainTimer))
+            if elapsed >= 1 {
+                timerSeconds = mainTimerSeconds - elapsed
+                if timerSeconds >= 1 {
+                    updateTime(seconds: timerSeconds)
+                } else {
+                    minusSeconds = abs(timerSeconds)
+                }
+            }
+        } else if let startBreakTimer = startDateBreakTimer {
+            let elapsed = Int(Date().timeIntervalSince(startBreakTimer))
+            
+            if elapsed >= 1 {
+                breakTimerSeconds = mainBreakTimerSeconds - elapsed
+                if breakTimerSeconds >= 1 {
+                    updateTime(seconds: breakTimerSeconds)
+                }
+            }
+        }
     }
     
 }
