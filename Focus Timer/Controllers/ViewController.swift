@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     private var soundNumber: Int = 0
     private var startDateMainTimer: Date?
     private var startDateBreakTimer: Date?
-    // If there is a value, then breakTimer = breakTimerSeconds - minusSeconds
+    // If there is a value, then breakTimer = mainBreakTimerSeconds - minusSeconds
     private var minusSeconds: Int?
     
     override func viewDidLoad() {
