@@ -30,9 +30,13 @@ class ViewController: UIViewController {
     private var startDateBreakTimer: Date?
     // If there is a value, then breakTimer = mainBreakTimerSeconds - minusSeconds
     private var minusSeconds: Int?
+    private var notification: CustomNotification!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        notification = CustomNotification()
+        notification.requestAuth()
         
         soundNumber = UserDefaults.standard.integer(forKey: Key.soundNumber.rawValue)
         if soundNumber == 0 {
@@ -64,10 +68,14 @@ class ViewController: UIViewController {
         if buttonState == .stop {
             timer.invalidate()
             return
-        } else if timerSeconds <= 1 {
+        } else if timerSeconds == 1 {
             timer.invalidate()
             setAndStartBreakTimerSeconds()
             player.play()
+            return
+        } else if timerSeconds < 1 {
+            timer.invalidate()
+            setAndStartBreakTimerSeconds()
             return
         }
         
@@ -104,6 +112,7 @@ class ViewController: UIViewController {
     }
     
     private func setMainTimerSeconds() {
+        notification.requestAuth(with: "Отдохни", secondsInterval: mainTimerSeconds)
         timerSeconds = mainTimerSeconds
         timeLabel.text = TimeParser.stringTime(from: timerSeconds)
         startStopButton.setImage(UIImage(named: "play"), for: .normal)
@@ -111,6 +120,7 @@ class ViewController: UIViewController {
     }
     
     private func setAndStartBreakTimerSeconds() {
+        notification.requestAuth(with: "Пора сфокусироваться на задаче", secondsInterval: mainBreakTimerSeconds)
         breakTimerSeconds = mainBreakTimerSeconds
         if let minus = minusSeconds {
             breakTimerSeconds = breakTimerSeconds - minus

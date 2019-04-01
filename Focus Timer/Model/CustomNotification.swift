@@ -11,15 +11,14 @@ import UserNotifications
 
 class CustomNotification {
     
-    var delegate: UIViewController?
-    
-    func requestAuth(with title: String) {
+    /// - parameter title: if is nil, then it is a simple request to allow notifications. Else the function creates a notification with the title.
+    func requestAuth(with title: String? =  nil, secondsInterval seconds: Int = 1) {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) {
             success, error in
             
-            if success {
+            if success && title != nil {
                 self.configureNotification()
-                self.createNotification(with: title)
+                self.createNotification(with: title!, seconds: seconds)
             }
         }
     }
@@ -29,14 +28,14 @@ class CustomNotification {
         UNUserNotificationCenter.current().setNotificationCategories([category])
     }
     
-    private func createNotification(with text: String) {
+    private func createNotification(with text: String, seconds: Int) {
         let content = UNMutableNotificationContent()
         
         content.title = text
         content.categoryIdentifier = "timer"
         content.sound = .default
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: Double(seconds), repeats: false)
         let request = UNNotificationRequest(identifier: "timerIsDone", content: content, trigger: trigger)
         
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
