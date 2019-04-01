@@ -11,6 +11,8 @@ import UserNotifications
 
 class CustomNotification {
     
+    private var identifier = "Custom Timer"
+    
     /// - parameter title: if is nil, then it is a simple request to allow notifications. Else the function creates a notification with the title.
     func requestAuth(with title: String? =  nil, secondsInterval seconds: Int = 1) {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) {
@@ -36,13 +38,13 @@ class CustomNotification {
         content.sound = .default
         
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: Double(seconds), repeats: false)
-        let request = UNNotificationRequest(identifier: "timerIsDone", content: content, trigger: trigger)
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
         
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
     
     func cancel() {
-        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
     }
     
 }

@@ -87,7 +87,7 @@ class ViewController: UIViewController {
         if buttonState == .stop || breakTimerSeconds <= 1 {
             timer.invalidate()
             setMainTimerSeconds()
-            if breakTimerSeconds <= 1 {
+            if breakTimerSeconds == 1 {
                 player.play()
             }
             return
