@@ -108,6 +108,7 @@ class ViewController: UIViewController {
             setMainTimerSeconds()
             startDateMainTimer = nil
             startDateBreakTimer = nil
+            notification.cancel()
         }
     }
     
@@ -120,7 +121,7 @@ class ViewController: UIViewController {
     }
     
     private func setAndStartBreakTimerSeconds() {
-        notification.requestAuth(with: "Пора сфокусироваться на задаче", secondsInterval: mainBreakTimerSeconds)
+        notification.requestAuth(with: "Cфокусируйся на задаче", secondsInterval: mainBreakTimerSeconds)
         breakTimerSeconds = mainBreakTimerSeconds
         if let minus = minusSeconds {
             breakTimerSeconds = breakTimerSeconds - minus
