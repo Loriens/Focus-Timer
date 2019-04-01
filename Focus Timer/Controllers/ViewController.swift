@@ -17,11 +17,9 @@ class ViewController: UIViewController {
     private var buttonState = ButtonState.stop
     private var timer: Timer?
     private var breakTimer: Timer?
-    // FIX: change time
-    private var mainBreakTimerSeconds = 5
+    private var mainBreakTimerSeconds = 5 * 60
     private var breakTimerSeconds: Int!
-    // FIX: change time
-    private var mainTimerSeconds = 10
+    private var mainTimerSeconds = 10 * 60
     private var timerSeconds: Int!
     private var player: CustomPlayer!
     /// Number of element in Const.sounds
@@ -46,11 +44,11 @@ class ViewController: UIViewController {
         }
         
         if let workingTime = UserDefaults.standard.object(forKey: Key.workingTime.rawValue) as? Int {
-            mainTimerSeconds = workingTime
+            mainTimerSeconds = workingTime * 60
         }
         
         if let breakingTime = UserDefaults.standard.object(forKey: Key.breakingTime.rawValue) as? Int {
-            mainBreakTimerSeconds = breakingTime
+            mainBreakTimerSeconds = breakingTime * 60
         }
         
         breakTimerSeconds = mainBreakTimerSeconds
@@ -140,15 +138,15 @@ class ViewController: UIViewController {
     
     @objc func userDefaultsValueChanged(_ sender: Any?) {
         if let workingTime = UserDefaults.standard.object(forKey: Key.workingTime.rawValue) as? Int {
-            if workingTime != mainTimerSeconds {
-                mainTimerSeconds = workingTime
+            if workingTime * 60 != mainTimerSeconds {
+                mainTimerSeconds = workingTime * 60
                 setMainTimerSeconds()
             }
         }
         
         if let breakingTime = UserDefaults.standard.object(forKey: Key.breakingTime.rawValue) as? Int {
-            if breakingTime != mainBreakTimerSeconds {
-                mainBreakTimerSeconds = breakingTime
+            if breakingTime * 60 != mainBreakTimerSeconds {
+                mainBreakTimerSeconds = breakingTime * 60
                 setMainTimerSeconds()
             }
         }
