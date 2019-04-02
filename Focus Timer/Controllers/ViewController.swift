@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     private var breakTimer: Timer?
     private var mainBreakTimerSeconds = 5 * 60
     private var breakTimerSeconds: Int!
-    private var mainTimerSeconds = 10 * 60
+    private var mainTimerSeconds = 25 * 60
     private var timerSeconds: Int!
     private var player: CustomPlayer!
     /// Number of element in Const.sounds
