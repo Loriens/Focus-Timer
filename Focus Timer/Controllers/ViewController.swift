@@ -17,9 +17,9 @@ class ViewController: UIViewController {
     private var buttonState = ButtonState.stop
     private var timer: Timer?
     private var breakTimer: Timer?
-    private var mainBreakTimerSeconds = 5 * 60
+    private var mainBreakTimerSeconds = 5
     private var breakTimerSeconds: Int!
-    private var mainTimerSeconds = 25 * 60
+    private var mainTimerSeconds = 25
     private var timerSeconds: Int!
     private var player: CustomPlayer!
     /// Number of element in Const.sounds
@@ -44,11 +44,11 @@ class ViewController: UIViewController {
         }
         
         if let workingTime = UserDefaults.standard.object(forKey: Key.workingTime.rawValue) as? Int {
-            mainTimerSeconds = workingTime * 60
+            mainTimerSeconds = workingTime
         }
         
         if let breakingTime = UserDefaults.standard.object(forKey: Key.breakingTime.rawValue) as? Int {
-            mainBreakTimerSeconds = breakingTime * 60
+            mainBreakTimerSeconds = breakingTime
         }
         
         breakTimerSeconds = mainBreakTimerSeconds
@@ -100,6 +100,7 @@ class ViewController: UIViewController {
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerUpdate(_:)), userInfo: nil, repeats: true)
             startStopButton.setImage(UIImage(named: "stop"), for: .normal)
             buttonState = .play
+            notification.requestAuth(with: "Отдохни", secondsInterval: mainTimerSeconds)
             startDateMainTimer = Date()
         } else {
             buttonState = .stop
@@ -111,7 +112,6 @@ class ViewController: UIViewController {
     }
     
     private func setMainTimerSeconds() {
-        notification.requestAuth(with: "Отдохни", secondsInterval: mainTimerSeconds)
         timerSeconds = mainTimerSeconds
         timeLabel.text = TimeParser.stringTime(from: timerSeconds)
         startStopButton.setImage(UIImage(named: "play"), for: .normal)
@@ -123,6 +123,7 @@ class ViewController: UIViewController {
         breakTimerSeconds = mainBreakTimerSeconds
         if let minus = minusSeconds {
             breakTimerSeconds = breakTimerSeconds - minus
+            minusSeconds = nil
         }
         timeLabel.text = TimeParser.stringTime(from: breakTimerSeconds)
         startStopButton.setImage(UIImage(named: "black stop"), for: .normal)
@@ -138,15 +139,15 @@ class ViewController: UIViewController {
     
     @objc func userDefaultsValueChanged(_ sender: Any?) {
         if let workingTime = UserDefaults.standard.object(forKey: Key.workingTime.rawValue) as? Int {
-            if workingTime * 60 != mainTimerSeconds {
-                mainTimerSeconds = workingTime * 60
+            if workingTime   != mainTimerSeconds {
+                mainTimerSeconds = workingTime
                 setMainTimerSeconds()
             }
         }
         
         if let breakingTime = UserDefaults.standard.object(forKey: Key.breakingTime.rawValue) as? Int {
-            if breakingTime * 60 != mainBreakTimerSeconds {
-                mainBreakTimerSeconds = breakingTime * 60
+            if breakingTime   != mainBreakTimerSeconds {
+                mainBreakTimerSeconds = breakingTime
                 setMainTimerSeconds()
             }
         }
