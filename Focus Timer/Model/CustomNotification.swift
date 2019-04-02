@@ -44,7 +44,7 @@ class CustomNotification {
     }
     
     func cancel() {
-        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
     }
     
 }
